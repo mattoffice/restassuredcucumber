@@ -54,9 +54,9 @@ public class BDDStyledMethod {
 
     public static void PerformPOSTWithBodyParameter() {
         HashMap<String,String> postContent = new HashMap<String,String>();
-        postContent.put("id", "13");
-        postContent.put("title", "three lions");
-        postContent.put("author", "skinner");
+        postContent.put("id", "14");
+        postContent.put("title", "jenkins");
+        postContent.put("author", "lord");
 
         given()
                 .contentType(ContentType.JSON).
@@ -65,6 +65,6 @@ public class BDDStyledMethod {
                 when()
                 .post("http://localhost:3000/posts/").
                 then()
-                .body("author", Is.is("skinner"));
+                .body("author", Is.is("lord"));
     }
 }
